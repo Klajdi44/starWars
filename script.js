@@ -22,6 +22,15 @@ function displayFilm(filmData) {
 
   const characters = filmData.characters;
   console.log(characters);
+  // loop through all characters
+  characters.forEach(character => {
+    // create a clone for each one
+    const characterclone = document.querySelector("#character_template").content.cloneNode(true);
+    // TEST: Just put the character-data (the url) in the output for now
+    characterclone.querySelector("[data-field=name]").textContent = character;
+    // append to the list of characters in the list of clones
+    clone.querySelector("#characters").appendChild(characterclone);
+  });
 
   document.querySelector("#movies").appendChild(clone);
 }
