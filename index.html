@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- where movies will get apennded -->
   <div id="movies"></div>
 
 
@@ -17,19 +18,20 @@
       <h1 data-field="title"></h1>
       <h2>Star Wars: Episode <span data-field="episode_id"></span></h2>
 
-      <ul id="characters">
-        <li>test</li>
-        <li>test2</li>
-      </ul>
+      <div id="characters">
+      
+      </div>
     </article>
   </template>
 
-  <template id="character_template">
-    <li data-field="name"></li>
+  <template id="character_template" class='characters'>
+    <div class="card">
+      <h4 data-field="name"> </h4>
+      <button data-field='modalOpen'>Read More</button>
+    </div>
   </template>
 
   <script src="script.js"></script>
-
 </body>
 
 </html>

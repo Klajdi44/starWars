@@ -1,0 +1,70 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif,helvetica;
+}
+
+body,html{
+  overflow-x: hidden;
+}
+
+
+#movies{
+  outline: 1px solid blue;
+  gap: 3em;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+#characters{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 3em;
+}
+
+.card{
+width: 200px;
+height: 200px;
+background:#000;
+color: #fff;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+/* Modal part */
+
+.modal{
+ position: fixed;
+ height: 100%;
+ width: 100%;
+ background: rgb(0, 0, 0 , 0.5);
+ top: 0;
+ left: 0;
+ display: none;
+
+}
+
+.modalContent{
+  height: 50vh;
+  width: 50vh;
+  background: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin: 0 auto;
+  transform: translate(50%,-50%);
+}
+
+.modalName{
+  position: relative;
+}
+
+.closeBtn{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 1.3em;
+}
